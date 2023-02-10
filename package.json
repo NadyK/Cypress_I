@@ -4,10 +4,10 @@
   "description": "cypress",
   "main": "index.js",
   "scripts": {
-    "testChromeHeadMobile": "npx cypress run --browser chrome --headed --config-file cypress.env.json",
-    "testChromeHeadless": "npx cypress run --browser chrome --headless",
-    "testElectronHeadMobile": "npx cypress run --browser electron --headed --config-file cypress.env.json",
-    "testElectronHeadless": "npx cypress run --browser electron --headless"
+    "test": "cypress run",
+    "testMobile": "cypress run --env viewportWidth=390,viewportHeight=844",
+    "testHeaded": "cypress open",
+    "testHeadedMobile": "cypress open --env viewportWidth=390,viewportHeight=844"
   },
   "author": "",
   "license": "ISC",
