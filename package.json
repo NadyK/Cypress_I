@@ -5,13 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "testMobile": "cypress run --env viewportWidth=390,viewportHeight=844",
-    "testHeaded": "cypress open",
-    "testHeadedMobile": "cypress open --env viewportWidth=390,viewportHeight=844"
+    "testWebChromeHeaded"    : "cypress run --browser chrome --headed    --config-file cypress.config.js",
+    "testWebChromeHeadless"  : "cypress run --browser chrome --headless  --config-file cypress.config.js",
+
+    "testMobChromeHeaded"    : "cypress run --browser chrome --headed   --config-file cypress2.config.js",
+    "testMobChromeHeadedless": "cypress run --browser chrome --headless --config-file cypress2.config.js",
+    
+    "testWebElectronHeaded"    : "cypress run --browser electron --headed    --config-file cypress.config.js",
+    "testWebElectronHeadless"  : "cypress run --browser electron --headless  --config-file cypress.config.js",
+
+    "testMobElectronHeaded"    : "cypress run --browser electron --headed   --config-file cypress2.config.js",
+    "testMobElectronHeadedless": "cypress run --browser electron --headless --config-file cypress2.config.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^10.7.0"
+  "devDependencies": {
+    "cypress": "^12.5.1"
   }
 }
